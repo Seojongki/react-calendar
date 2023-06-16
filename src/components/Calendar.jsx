@@ -8,7 +8,7 @@ function Calendar(props) {
 
     
     //날짜 조회하기
-    //let d = new Date();
+    let d = new Date();
     // let year = d.getFullYear();//년
     // let month = d.getMonth();//월
     // let date = d.getDate();//일
@@ -56,9 +56,22 @@ function Calendar(props) {
                             <li 
                                 key={i}
                                 style={{
-                                    backgroundColor: date === (i+1)?'red':'black',
-                                    borderRadius: date === (i+1)?'10px':'',
+                                    backgroundColor: 
+                                        date === (i+1) && 
+                                        month === d.getMonth() &&
+                                        year === d.getFullYear()
+                                        ?'red':'black',
+                                    borderRadius: date === (i+1) &&
+                                        month === d.getMonth() &&
+                                        year === d.getFullYear()                                        
+                                        ?'10px':'',
                                 }}
+                                className={
+                                    new Date(year, month, i+1).getDay() === 0 ||
+                                    new Date(year, month, i+1).getDay() === 6
+                                    ? 'holyday' : ''
+                                }
+
                             >{i+1}</li>
                         )
                     })

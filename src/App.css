@@ -28,6 +28,7 @@ ul {
 .calendar ul.date {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .calendar ul.date li {
@@ -48,4 +49,9 @@ ul {
   margin: 0.5rem;
   height: 35px;
   width: 70px;
+}
+
+
+.holyday {
+  color: red
 }
