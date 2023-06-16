@@ -3,4 +3,43 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  /*  */
+  box-sizing: border-box; 
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.calendar {
+  background: #000;
+  color: #fff;
+  width: 400px;
+  padding: 1rem; /* root em 글자1칸크기(em은 상대적임, rem 표준크기)  16px*/
+  padding-top: 2rem;  
+}
+
+.calendar ul.date {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.calendar ul.date li {
+  border-bottom: 1px solid rgba(255,255,255, 0.25);
+  padding: 0.5em; /* 여백 반칸 */
+}
+
+.calendar header { display: flex; }
+.calendar header h2 { 
+  font-size: 40px;
+  margin: 0; 
+  line-height: 40px;
+  margin-right: 1rem;
+
 }
