@@ -41,5 +41,11 @@ ul {
   margin: 0; 
   line-height: 40px;
   margin-right: 1rem;
+}
 
+
+.App .btn-group button {
+  margin: 0.5rem;
+  height: 35px;
+  width: 70px;
 }
